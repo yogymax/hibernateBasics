@@ -1,11 +1,33 @@
 package com.scp.hibernate.configurations;
 
+import java.util.HashSet;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="EMP_INFOR")
 public class Employee {
 	
+	
+	
+	@Id
+	@Column(name="EMP_ID")
 	private int empId;
+	
+	@Column(name="EMP_NAME")
 	private String empName;
+	
+	@Column(name="EMP_ADDRESS")
 	private String address;
+	
 	private double salary;
+	
+	
 	public int getEmpId() {
 		return empId;
 	}
